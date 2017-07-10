@@ -13,7 +13,7 @@ class Index extends Component {
   render () {
     const brand = brands()[this.props.brands.brand]
     return (
-      <Layout brand={brand}>
+      <Layout brand={brand} patterns={this.props.patterns.patterns} sections={this.props.sections.sections}>
         <div>Welcome to the pattern library - {this.props.brands.brand}</div>
       </Layout>
     )
@@ -27,7 +27,9 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
   return {
-    brands: state.brands
+    brands: state.brands,
+    patterns: state.patterns,
+    sections: state.sections
   }
 }
 

@@ -3,11 +3,11 @@ export const brands = {
     return (dispatch) => {
       return new Promise((resolve, reject) => {
         resolve(
-                    dispatch({
-                      type: 'BRAND_SWITCH',
-                      brand: brand
-                    })
-                )
+          dispatch({
+            type: 'BRAND_SWITCH',
+            brand: brand
+          })
+        )
       })
     }
   }

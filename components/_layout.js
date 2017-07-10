@@ -1,6 +1,7 @@
 import PropTypes from 'proptypes'
 import Head from 'next/head'
-import { Col, ControlLabel, FormControl, FormGroup, Panel, PanelGroup, Row } from 'react-bootstrap'
+import { Col, ControlLabel, FormControl, FormGroup, Row } from 'react-bootstrap'
+import Navigation from './organisms/Navigation'
 
 const Layout = (props) => (
   <div>
@@ -19,10 +20,15 @@ const Layout = (props) => (
               <option value='other'>...</option>
             </FormControl>
           </FormGroup>
-          <PanelGroup defaultActiveKey='2' accordion>
-            <Panel header='Panel 1' eventKey='1'>Panel 1 content</Panel>
-            <Panel header='Panel 2' eventKey='2'>Panel 2 content</Panel>
-          </PanelGroup>
+          <Navigation>
+            {props.sections && props.sections.map(section => (
+              <Navigation.Section title={section.name} sectionKey={section.key} key={section.key}>
+                {props.patterns.filter(pattern => pattern.sectionKey === section.key).map(pattern => (
+                  <Navigation.Item href={pattern.key} title={pattern.name} key={`${section.key}-${pattern.key}`} />
+                ))}
+              </Navigation.Section>
+            ))}
+          </Navigation>
         </Col>
         <Col xs={12} sm={9} lg={10} componentClass='main'>
           {props.children}
@@ -33,7 +39,9 @@ const Layout = (props) => (
 )
 
 Layout.propTypes = {
-  brand: PropTypes.object.isRequired
+  brand: PropTypes.object.isRequired,
+  patterns: PropTypes.array.isRequired,
+  sections: PropTypes.array.isRequired
 }
 
 export default Layout
