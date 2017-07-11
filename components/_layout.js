@@ -17,7 +17,7 @@ const Layout = (props) => (
           <h3>Pattern Library</h3>
           <FormGroup controlId='formControlsSelect'>
             <ControlLabel>Brand Style</ControlLabel>
-            <FormControl componentClass='select' placeholder='select' defaultValue={props.brand} onChange={(e) => props.handleBrandChange(e.target.value)}>
+            <FormControl componentClass='select' placeholder='select' value={props.brand.name} onChange={(e) => props.handleBrandChange(e.target.value)}>
               {Object.keys(props.brands).map(brandKey => {
                 const brand = props.brands[brandKey]
                 return (brand) ? (
