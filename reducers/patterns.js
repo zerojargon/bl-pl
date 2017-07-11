@@ -1,6 +1,11 @@
 const initialState = {
   patterns: [
     {
+      name: 'Auction - Grid Item',
+      key: 'auctionGridItem',
+      sectionKey: 'patterns'
+    },
+    {
       name: 'Auction - List Item',
       key: 'auctionListItem',
       sectionKey: 'patterns'

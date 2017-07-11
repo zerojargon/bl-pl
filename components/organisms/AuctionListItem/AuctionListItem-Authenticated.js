@@ -1,15 +1,15 @@
 export default () => (
-  <div className='ui-lot-item-list' style={{ display: 'block' }}>
-    <div className='timedItem' style={{ overflow: 'auto' }}>
+  <div className='ui-lot-item-list'>
+    <div className='timedItem'>
       <div className='col-md-6 col-sm-12 col-xs-12 timeditem-list-one'>
         <div className='ui-timeditem-image-grid-box'>
           <div className='itemImageRegion'>
             <div>
               <div className='ui-timed-image'>
-                <a rel='prettyPhoto' title='Item Title One' href='https://res.cloudinary.com/bidlogix-test/image/upload/q_70,c_fill/v1499250300/local/1_epeqml_ilupxc.jpg' alt='1_epeqml.jpg' />
+                <a rel='prettyPhoto' title='Item Title One' href='#' alt='1_epeqml.jpg' />
                 <div className='text-center'>
-                  <a rel='prettyPhoto' title='Item Title One' href='https://res.cloudinary.com/bidlogix-test/image/upload/q_70,c_fill/v1499250300/local/1_epeqml_ilupxc.jpg' alt='1_epeqml.jpg' />
-                  <a id='itemDetails219image' className='evh_LoadItemDetails img-responsive' data-id='219' href='/auction-031/itemDetails/159/219'>
+                  <a rel='prettyPhoto' title='Item Title One' href='#' alt='1_epeqml.jpg' />
+                  <a id='itemDetails219image' className='evh_LoadItemDetails img-responsive' data-id='219' href='#'>
                     <img id='biddingItemImage_219' className='x-timed-preview img-responsive' src='https://res.cloudinary.com/bidlogix-test/image/upload/q_70,w_380,h_285,c_fill/v1499250300/local/1_epeqml_ilupxc.jpg' alt='1_epeqml.jpg' />
                   </a>
                 </div>
@@ -23,14 +23,14 @@ export default () => (
                 <a id='watching_219' href='#' className='x-watching' title='Watch This Item'>
             <i className='fa fa-binoculars' style={{ color: 'white' }} data-toggle='tooltip' data-placement='bottom' title='' data-original-title='Watch This Item'></i>
           </a> &nbsp;
-                <a id='watchingLink_219' href='/auction-031/myBids/3' className='watchlist-link' data-toggle='tooltip' data-container='body'
-                  title='' data-original-title='Go to Watch List'><i className='fa fa-th-list' style={{ color: 'white', fontSize: '14px' }}></i></a>
+                <a id='watchingLink_219' href='#' className='watchlist-link' data-toggle='tooltip' data-container='body'
+                  title='' data-original-title='Go to Watch List'><i className='fa fa-th-list'></i></a>
               </div>
             </div>
           </div>
           <div className='timeLeftRegion'>
             <div>
-              <div id='timeLeftMessage219' className='item-image-mask-bottom' style={{ maxWidth: '380px' }}>
+              <div id='timeLeftMessage219' className='item-image-mask-bottom'>
                 <p className=''>&nbsp;
                   <span id='timeLeft_219'></span>
                 </p>
@@ -44,7 +44,7 @@ export default () => (
           <div>
             <div className='t2-timed-title text-center'>
               <h5 id='lotTitle219'>
-                <a id='itemDetails219' href='/auction-031/itemDetails/158/219' className='evh_LoadItemDetails' data-id='219'>Title</a>
+                <a id='itemDetails219' href='#' className='evh_LoadItemDetails' data-id='219'>Title</a>
               </h5>
             </div>
             <div className='t2-timed-summary text-center'>
@@ -95,10 +95,10 @@ export default () => (
         <div className='placeBidRegion'>
           <div>
             <div className='btn-group btn-group-justified' role='group' aria-label='...'>
-              <div className='btn-group' role='group' style={{ paddingLeft: '10px', paddingRight: '10px' }}>
+              <div className='btn-group' role='group'>
                 <button id='buynowButton_219' className='x-buynow disabled btn btn-primary' type='button'>Buy Now £12</button>
               </div>
-              <div className='btn-group' role='group' style={{ paddingLeft: '10px', paddingRight: '10px' }}>
+              <div className='btn-group' role='group'>
                 <button id='registerButton219' className='x-register btn btn-primary ' data-amount='12' type='button'>Register</button>
               </div>
             </div>
