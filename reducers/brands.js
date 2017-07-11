@@ -4,7 +4,7 @@ const initialState = {
 
 const brands = (state = initialState, action) => {
   switch (action.type) {
-    case 'SWITCH_BRAND':
+    case 'BRAND_SWITCH':
       return Object.assign({}, state, { brand: action.brand })
     default: return state
   }

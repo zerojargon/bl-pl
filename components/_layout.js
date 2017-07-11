@@ -13,11 +13,17 @@ const Layout = (props) => (
     </Head>
     <div className='container-fluid'>
       <Row>
-        <Col xs={12} sm={3} lg={2} componentClass='nav'>
+        <Col xs={12} sm={3} lg={2} componentClass='nav' className='panel panel-default'>
+          <h3>Pattern Library</h3>
           <FormGroup controlId='formControlsSelect'>
             <ControlLabel>Brand Style</ControlLabel>
-            <FormControl componentClass='select' placeholder='select' defaultValue={props.brand}>
-              <option value='other'>...</option>
+            <FormControl componentClass='select' placeholder='select' defaultValue={props.brand} onChange={(e) => props.handleBrandChange(e.target.value)}>
+              {Object.keys(props.brands).map(brandKey => {
+                const brand = props.brands[brandKey]
+                return (brand) ? (
+                  <option value={brand.name} key={`brandSelect${brand.name}`}>{brand.name}</option>
+                ) : null
+              })}
             </FormControl>
           </FormGroup>
           <Navigation>
@@ -40,6 +46,8 @@ const Layout = (props) => (
 
 Layout.propTypes = {
   brand: PropTypes.object.isRequired,
+  brands: PropTypes.object.isRequired,
+  handleBrandChange: PropTypes.func.isRequired,
   patterns: PropTypes.array.isRequired,
   sections: PropTypes.array.isRequired
 }

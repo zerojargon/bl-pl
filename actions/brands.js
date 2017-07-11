@@ -1,4 +1,4 @@
-export const brands = {
+export default {
   switch: (brand) => {
     return (dispatch) => {
       return new Promise((resolve, reject) => {
